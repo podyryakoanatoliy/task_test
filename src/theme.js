@@ -17,6 +17,7 @@ export const theme = {
       rowHoverBg: "#f5f5f5",
       padding: 12,
       paddingContentVertical: 10,
+      hoverBg: "#c53535",
     },
   },
 };

@@ -1,6 +1,6 @@
 import { Table, Avatar, Space } from "antd";
 
-function CoinList({ data, isLoading }) {
+function CoinList({ data, isLoading, paginationConfig = false }) {
   const formatCap = (value) => {
     if (!value) return "$0";
     if (value >= 1e12) return `$${(value / 1e12).toFixed(2)}T`;
@@ -98,7 +98,7 @@ function CoinList({ data, isLoading }) {
       dataSource={dataSource}
       columns={columns}
       loading={isLoading}
-      pagination={false}
+      pagination={paginationConfig}
       sticky
       scroll={{ x: "max-content" }}
     />

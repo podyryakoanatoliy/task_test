@@ -1,18 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
-const FETCH_COINS_URL =
-  "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=50&page=1";
-
-export function useCoins() {
+export function useCoins(perPage = 50, page = 1) {
   return useQuery({
-    queryKey: ["coins"],
+    queryKey: ["coins", { perPage, page }],
     queryFn: async () => {
-      const { data } = await axios.get(FETCH_COINS_URL);
+      const { data } = await axios.get(
+        `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=${perPage}&page=${page}`,
+      );
       return data;
     },
 
     staleTime: 1000 * 60,
-    refetchInterval: 1000 * 60 * 5, // Треба буде замінити на менше щоб не отрмувати 429!!!!!!!!!!!!!
+    refetchInterval: 1000 * 60,
   });
 }

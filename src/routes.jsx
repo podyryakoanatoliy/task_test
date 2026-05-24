@@ -1,6 +1,13 @@
-import { HomeOutlined, DollarOutlined } from "@ant-design/icons";
+import {
+  HomeOutlined,
+  DollarOutlined,
+  EuroCircleOutlined,
+  LineChartOutlined,
+} from "@ant-design/icons";
 import Home from "./pages/Home.jsx";
-import Coins from "./pages/Coins.jsx";
+import CoinsPage from "./pages/CoinsPage.jsx";
+import PaginationCoinPage from "./pages/PaginationCoinPage.jsx";
+import ChartPage from "./pages/ChartPage.jsx";
 
 export const routes = [
   { path: "/", label: "Home", icon: <HomeOutlined />, element: <Home /> },
@@ -8,6 +15,18 @@ export const routes = [
     path: "/coins",
     label: "Coin",
     icon: <DollarOutlined />,
-    element: <Coins />,
+    element: <CoinsPage />,
+  },
+  {
+    path: "/coins-paged",
+    label: "Coin with pagination",
+    icon: <EuroCircleOutlined />,
+    element: <PaginationCoinPage />,
+  },
+  {
+    path: "/chart",
+    label: "Chart",
+    icon: <LineChartOutlined />,
+    element: <ChartPage />,
   },
 ];
