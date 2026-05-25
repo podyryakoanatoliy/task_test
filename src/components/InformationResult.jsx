@@ -4,7 +4,7 @@ import { Table, Button, Result } from "antd";
 const countryLabels = {
   ukraine: "Україна",
   usa: "США",
-  poland: "Польща",
+  spain: "Іспанія",
   germany: "Німеччина",
   united_kingdom: "Велика Британія",
 };

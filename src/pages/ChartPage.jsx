@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Spin, Alert, Card } from "antd";
 import { useCoinChart } from "../hooks/useCoinChart.js";
 import ChartHeader from "../components/ChartHeader.jsx";
-import CoinRechart from "../components/CoinChart.jsx";
+import CoinRechart from "../components/CoinRechart.jsx";
 
 function ChartPage() {
   const [selectedCoin, setSelectedCoin] = useState("bitcoin");
