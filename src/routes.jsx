@@ -3,11 +3,14 @@ import {
   DollarOutlined,
   EuroCircleOutlined,
   LineChartOutlined,
+  FormOutlined,
 } from "@ant-design/icons";
+
 import Home from "./pages/Home.jsx";
 import CoinsPage from "./pages/CoinsPage.jsx";
 import PaginationCoinPage from "./pages/PaginationCoinPage.jsx";
 import ChartPage from "./pages/ChartPage.jsx";
+import WizardFormPage from "./pages/WizardFormPage.jsx";
 
 export const routes = [
   { path: "/", label: "Home", icon: <HomeOutlined />, element: <Home /> },
@@ -28,5 +31,11 @@ export const routes = [
     label: "Chart",
     icon: <LineChartOutlined />,
     element: <ChartPage />,
+  },
+  {
+    path: "/wizard",
+    label: "Form Wizard",
+    icon: <FormOutlined />,
+    element: <WizardFormPage />,
   },
 ];
